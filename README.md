@@ -1,2 +1,2 @@
-# nodometerjs.com
-Documentation page for Nodometer
+# landing-page
+Documentation page for Landing-page
