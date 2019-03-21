@@ -1,656 +1,531 @@
-<!DOCTYPE html>
-<html lang="zxx" class="no-js">
+<!doctype html>
+<html>
 
 <head>
-	<!-- Mobile Specific Meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!-- Favicon-->
-	<link rel="shortcut icon" href="img/fav.png">
-	<!-- Author Meta -->
-	<meta name="author" content="codepixer">
-	<!-- Meta Description -->
-	<meta name="description" content="">
-	<!-- Meta Keyword -->
-	<meta name="keywords" content="">
-	<!-- meta character set -->
-	<meta charset="UTF-8">
-	<!-- Site Title -->
-	<title>Startup</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1">
 
-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-	<!--
-			CSS
-			============================================= -->
-	<link rel="stylesheet" href="css/linearicons.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="css/nice-select.css">
-	<link rel="stylesheet" href="css/animate.min.css">
-	<link rel="stylesheet" href="css/owl.carousel.css">
-	<link rel="stylesheet" href="css/main.css">
+  <!-- key words -->
+  <meta name="keywords" content="React, ReactION, Developer Tool, Javascript, ES6, VS Code, Visual Studio Code Extension, Developer, React Developer, D3, Create React App, Learn programming, Visualization, React 16, React 15, React fiber, fiber, redux, react redux, router, react router, browser router, redux store, d3 tree, d3 v5, react visualizer, component visualizer, react component visualizer, react component"
+  />
+
+  <title>ReactION</title>
+  <link rel="shortcut icon" href="img/logo.png" type="img/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600'
+    rel='stylesheet' type='text/css'>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+  <link href="css/responsive.css" rel="stylesheet" type="text/css">
+  <link href="css/animate.css" rel="stylesheet" type="text/css">
+
+  <!--[if IE]><style type="text/css">.pie {behavior:url(PIE.htc);}</style><![endif]-->
+  <script type="text/javascript" src="js/jquery.1.8.3.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="js/jquery.isotope.js"></script>
+  <script type="text/javascript" src="js/wow.js"></script>
+  <script type="text/javascript" src="js/classie.js"></script>
+  <!-- disable contact form for github pages, replace with free formspree.io -->
+  <!-- <script src="contactform/contactform.js"></script> -->
+
+  <!-- load the d3.js library -->
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119523227-1"></script>
+
+  <!-- Google Analytics -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-119523227-1');
+  </script>
+
+  <!-- Amplitude Analytics -->
+  <script type="text/javascript">
+    (function (e, t) {
+      var n = e.amplitude || { _q: [], _iq: {} }; var r = t.createElement("script")
+        ; r.type = "text/javascript"; r.async = true
+        ; r.src = "https://cdn.amplitude.com/libs/amplitude-4.2.1-min.gz.js"
+        ; r.onload = function () {
+          if (e.amplitude.runQueuedFunctions) {
+            e.amplitude.runQueuedFunctions()
+          } else {
+            console.log("[Amplitude] Error: could not load SDK")
+          }
+        }
+        ; var i = t.getElementsByTagName("script")[0]; i.parentNode.insertBefore(r, i)
+        ; function s(e, t) {
+        e.prototype[t] = function () {
+          this._q.push([t].concat(Array.prototype.slice.call(arguments, 0))); return this
+        }
+        }
+      var o = function () { this._q = []; return this }
+        ; var a = ["add", "append", "clearAll", "prepend", "set", "setOnce", "unset"]
+        ; for (var u = 0; u < a.length; u++) { s(o, a[u]) } n.Identify = o; var c = function () {
+        this._q = []
+          ; return this
+        }
+        ; var l = ["setProductId", "setQuantity", "setPrice", "setRevenueType", "setEventProperties"]
+        ; for (var p = 0; p < l.length; p++) { s(c, l[p]) } n.Revenue = c
+        ; var d = ["init", "logEvent", "logRevenue", "setUserId", "setUserProperties", "setOptOut", "setVersionName", "setDomain", "setDeviceId", "setGlobalUserProperties", "identify", "clearUserProperties", "setGroup", "logRevenueV2", "regenerateDeviceId", "logEventWithTimestamp", "logEventWithGroups", "setSessionId", "resetSessionId"]
+        ; function v(e) {
+          function t(t) {
+          e[t] = function () {
+            e._q.push([t].concat(Array.prototype.slice.call(arguments, 0)))
+          }
+          }
+          for (var n = 0; n < d.length; n++) { t(d[n]) }
+        } v(n); n.getInstance = function (e) {
+          e = (!e || e.length === 0 ? "$default_instance" : e).toLowerCase()
+            ; if (!n._iq.hasOwnProperty(e)) { n._iq[e] = { _q: [] }; v(n._iq[e]) } return n._iq[e]
+        }
+        ; e.amplitude = n
+    })(window, document);
+
+    amplitude.getInstance().init("2a4335eb07211f28ecc3964934659998");
+    window.addEventListener('DOMContentLoaded', () => {
+      amplitude.getInstance().logEvent('PageView');
+    });
+  </script>
+    <script src="particles.js">
+    particlesJS.load('particles-js', 'assets/particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
+    </script>
+
 </head>
 
 <body>
+  <!--header-start-->
+  <header class="header" id="header">
+    <div id="particles-js">
+    <div class="container">
+    <!--particles-end-->
+      <figure class="logo animated fadeInDown delay-07s">
+        <img src="img/logo.png" alt="React Sight, a visualizer for React applications">
+      </figure>
+      <h1 class="animated fadeInDown delay-07s" id="logo-header">ReactION</h1>
+      <ul class="we-create animated fadeInUp delay-1s">
+        <li id="header-description">
+          React Component Visualizer for VS Code
+        </li>
+        <br/>
+        <br/>
+        <br/>
+        <a class="github-button" href="https://github.com/ReactION-js/ReactION" data-size="large" aria-label="Follow @React-Sight on GitHub">
+          ReactION GITHUB
+        </a>
+        <a class="github-button" href="https://github.com/ReactION-js/ReactION" data-size="large" data-show-count="true"
+          aria-label="https://github.com/ReactION-js/ReactION">Star</a>
+      </ul>
+      <a id="get-started-btn" class="link animated fadeInUp delay-1s servicelink" href="#download">Learn More</a>
+    </div>
+  </div>
+  </header>
+  <!--header-end-->
 
-	<header id="header" id="home">
-		<div class="container">
-			<div class="row align-items-center justify-content-between d-flex">
-				<div id="logo">
-					<a href="index.html"><img src="Startup - Doc/img/black.png" alt="" title="" width="30px" /></a>
-				</div>
-				<nav id=" nav-menu-container">
-					<ul class="nav-menu">
+  <!--main-nav-start-->
+  <nav class="main-nav-outer" id="test">
+    <div class="container" id="header-container">
+      <ul class="main-nav">
+        <li>
+          <a href="#header">Home</a>
+        </li>
+        <li>
+          <a href="#download">Getting Started</a>
+        </li>
 
-						<li class="menu-active"><a href="index.html#Home">Home</a></li>
-						<li><a href="index.html#About">About</a></li>
-						<li><a href="index.html#Project">Project</a></li>
-						<li><a href="index.html#Demo">Demo</a></li>
-						<li><a href="index.html#Contact">Contact</a></li>
-					</ul>
-				</nav><!-- #nav-menu-container -->
-			</div>
-		</div>
-	</header><!-- #header -->
+        <li class="small-logo">
+          <a href="#header">
+            <img src="img/logo.png" alt="" style="width: 100px;">
+          </a>
+        </li>
+        <li>
+          <a href="#features">Features</a>
+        </li>
+        <li>
+          <a href="#team">
+            Developers
+          </a>
+        </li>
+      </ul>
+      <a class="res-nav_click" href="#">
+        <i class="fa-bars"></i>
+      </a>
+    </div>
+  </nav>
+  <!--main-nav-end-->
 
+  <section class="main-section" id="download">
+    <!--main-section-start-->
+    <div class="container">
+      <h2>
+        Getting Started
+      </h2>
+      <br>
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 wow fadeInLeft delay-05s">
 
-	<!-- start banner Area -->
-	<section class="banner-area" id="home">
-		<div class="container">
-			<div class="row fullscreen d-flex align-items-center justify-content-center">
-				<div class="banner-content col-lg-7">
-					<h1>
-						React Component Visualizer for VS Code
-					</h1>
-					<p class="pt-20 pb-20">
-						A real-time React component visualizer inside your editor.
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End banner Area -->
+          <!-- install react dev tools -->
+          <div class="service-list">
+            <div class="service-list-col1">
+              <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+            </div>
+            <div class="service-list-col2">
+              <h3>Enable React DevTools</h3>
+              React Sight requires
+              <a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi">React Dev Tools</a> for reading information about your App. Simply add to Chrome if you don't have it installed
+            </div>
+          </div>
 
-	<!-- Start we-offer Area -->
-	<section class="we-offer-area section-gap" id="offer">
-		<div class="container">
-			<div class="row d-flex justify-content-center">
-				<div class="menu-content pb-60 col-lg-10">
-					<div class="title text-center">
-						<h1 class="mb-10">Features</h1>
-						<p>Although we are still in beta, we have some awesome features!\</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="single-offer d-flex flex-row pb-30">
-						<div class="icon">
-							<img src="img/s1.png" alt="">
-						</div>
-						<div class="desc">
-							<a href="#">
-								<h4>Unlimited Colors</h4>
-							</a>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-								dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
-							</p>
-						</div>
-					</div>
-					<div class="single-offer d-flex flex-row pb-30">
-						<div class="icon">
-							<img src="img/s3.png" alt="">
-						</div>
-						<div class="desc">
-							<a href="#">
-								<h4>Endless Support</h4>
-							</a>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-								dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="single-offer d-flex flex-row pb-30">
-						<div class="icon">
-							<img src="img/s2.png" alt="">
-						</div>
-						<div class="desc">
-							<a href="#">
-								<h4>Smart Security</h4>
-							</a>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-								dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
-							</p>
-						</div>
-					</div>
-					<div class="single-offer d-flex flex-row pb-30">
-						<div class="icon">
-							<img src="img/s4.png" alt="">
-						</div>
-						<div class="desc">
-							<a href="#">
-								<h4>Smart Security</h4>
-							</a>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-								dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End we-offer Area -->
+          <!-- install react sight -->
+          <div class="service-list">
+            <div class="service-list-col1">
+              <i class="fa fa-chrome" aria-hidden="true"></i>
+            </div>
+            <div class="service-list-col2">
+              <h3>Add React Sight to Chrome</h3>
+              Install
+              <a href="https://chrome.google.com/webstore/detail/react-sight/aalppolilappfakpmdfdkpppdnhpgifn">React Sight</a> from the Chrome web store.
+              <br> For local projects, check 'Allow access to file URLs' on the extensions page
+            </div>
+          </div>
 
+          <!-- Run your application -->
+          <div class="service-list">
+            <div class="service-list-col1">
+              <i class="fa fa-desktop" aria-hidden="true"></i>
+            </div>
+            <div class="service-list-col2">
+              <h3>Run your Application</h3>
+              Open your React application, or open (almost!) any website running React!
+            </div>
+          </div>
 
-	<!-- Start home-video Area -->
-	<section class="home-video-area" id="about">
-		<div class="container-fluid">
-			<div class="row justify-content-end align-items-center">
-				<div class="col-lg-4 no-padding video-right">
-					<p class="top-title">Tutorial for beginner</p>
-					<h1>Watch tutorial <br>
-						Video of SaaS to start</h1>
-					<p><span>We are here to listen from you deliver exellence</span></p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-						dolore. magna aliqua. Ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore. magna aliqua. Ut enim ad minim.
-					</p>
-				</div>
-				<section class="video-area col-lg-6">
-					<div class="overlay overlay-bg"></div>
-					<div class="container">
-						<div class="video-content">
-							<a href="http://www.youtube.com/watch?v=0O2aH4XLbto" class="play-btn"><img src="img/play-btn.png"
-									alt=""></a>
-						</div>
-					</div>
-				</section>
-			</div>
-		</div>
-	</section>
-	<!-- End home-aboutus Area -->
+          <!-- Run your appllication -->
+          <div class="service-list">
+            <div class="service-list-col1">
+              <i class="fa fa-wrench" aria-hidden="true"></i>
+            </div>
+            <div class="service-list-col2">
+              <h3>Open React Sight</h3>
+              Open the Chrome Developer Tools and click the React Sight panel
+            </div>
+          </div>
 
+          <div class="service-list">
+            <div class="service-list-col1">
+              <i class="fa fa-github" aria-hidden="true"></i>
+            </div>
+            <div class="service-list-col2">
+              <h3>Contribute on GitHub</h3>
+              <a href="https://github.com/ReactION-js/ReactION">https://github.com/ReactION-js/ReactION</a>
+            </div>
+          </div>
+        </div>
+        <figure class="col-lg-8 col-sm-6  text-right wow fadeInUp delay-02s">
+          <img id="testing-gif" src="img/testingDEMO.gif" alt="">
+        </figure>
+      </div>
+    </div>
+  </section>
+  <!--main-section-end-->
 
-	<!-- Start home-aboutus Area -->
-	<section class="home-aboutus-area">
-		<div class="container-fluid">
-			<div class="row justify-content-center align-items-center">
-				<div class="col-lg-8 no-padding about-left">
-					<img class="img-fluid" src="img/about-bg.jpg" alt="">
-				</div>
-				<div class="col-lg-4 no-padding about-right">
-					<p class="top-title">24/7 Support system</p>
-					<h1 class="text-white">A Handy support <br>
-						System for the Software</h1>
-					<p><span>We are here to listen from you deliver exellence</span></p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-						dolore. magna aliqua. Ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore. magna aliqua. Ut enim ad minim.
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End home-aboutus Area -->
+  <section class="main-section alabaster" id="features">
+    <!--main-section alabaster-start-->
+    <div class="container">
+      <div class="row">
+        <figure class="col-lg-5 col-sm-4 wow fadeInLeft">
+          <img src="img/all-logo.png" alt="mobile friendly">
+        </figure>
+        <div class="col-lg-7 col-sm-8 featured-work">
+          <h2>Features</h2>
+          <P class="padding-b"></P>
 
+          <div class="featured-box">
+            <div class="featured-box-col1 wow fadeInRight delay-02s">
+              <i class="fa-magic"></i>
+            </div>
+            <div class="featured-box-col2 wow fadeInRight delay-02s">
+              <h3>No Set up required</h3>
+              <p>ReactION requires NO modification to your codebase, so using it is as simple as installing our VS Code Extension</p>
+            </div>
+          </div>
 
-	<!-- Start protfolio Area -->
-	<section class="protfolio-area section-gap" id="project">
-		<div class="container">
-			<div class="row d-flex justify-content-center">
-				<div class="menu-content pb-60 col-lg-10">
-					<div class="title text-center">
-						<h1 class="mb-10">Our Offered Services</h1>
-						<p>Who are in extremely love with eco friendly system.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-8 single-portfolio">
-					<img class="image img-fluid" src="img/p1.jpg" alt="">
-					<a href="img/p1.jpg" class="img-pop-up">
-						<div class="middle">
-							<div class="text"><span class="lnr lnr-frame-expand"></span></div>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4 single-portfolio">
-					<img class="image img-fluid" src="img/p2.jpg" alt="">
-					<a href="img/p2.jpg" class="img-pop-up">
-						<div class="middle">
-							<div class="text"><span class="lnr lnr-frame-expand"></span></div>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4 single-portfolio">
-					<img class="image img-fluid" src="img/p3.jpg" alt="">
-					<a href="img/p3.jpg" class="img-pop-up">
-						<div class="middle">
-							<div class="text"><span class="lnr lnr-frame-expand"></span></div>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-8 single-portfolio">
-					<img class="image img-fluid" src="img/p4.jpg" alt="">
-					<a href="img/p4.jpg" class="img-pop-up">
-						<div class="middle">
-							<div class="text"><span class="lnr lnr-frame-expand"></span></div>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-6 single-portfolio">
-					<img class="image img-fluid" src="img/p5.jpg" alt="">
-					<a href="img/p5.jpg" class="img-pop-up">
-						<div class="middle">
-							<div class="text"><span class="lnr lnr-frame-expand"></span></div>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-6 single-portfolio">
-					<img class="image img-fluid" src="img/p6.jpg" alt="">
-					<a href="img/p6.jpg" class="img-pop-up">
-						<div class="middle">
-							<div class="text"><span class="lnr lnr-frame-expand"></span></div>
-						</div>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End protfolio Area -->
+          <div class="featured-box">
+            <div class="featured-box-col1 wow fadeInRight delay-02s">
+              <i class="fa-flash"></i>
+            </div>
+            <div class="featured-box-col2 wow fadeInRight delay-02s">
+              <h3>Works with All your favorite libraries</h3>
+              <p>React-Sight supports React 14.7+ (including Fiber), React Router v4, React Redux, and more</p>
+            </div>
+          </div>
 
-	<!-- Start callto-action Area -->
-	<section class="callto-action-area relative section-gap">
-		<div class="overlay overlay-bg"></div>
-		<div class="container">
-			<div class="row d-flex justify-content-center">
-				<div class="menu-content col-lg-9">
-					<div class="title text-center">
-						<h1 class="mb-10 text-white">Got Impressed to our features</h1>
-						<p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-							incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-						<a class="primary-btn" href="#">Request Free Demo</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End calto-action Area -->
+          <div class="featured-box">
+            <div class="featured-box-col1 wow fadeInRight delay-04s">
+              <i class="fa-rocket"></i>
+            </div>
+            <div class="featured-box-col2 wow fadeInRight delay-04s">
+              <h3>Built for Speed</h3>
+              <p>React-Sight is light-weight and unobtrusive, and will show you how your Application is working</p>
+            </div>
+          </div>
+          <div class="featured-box">
+            <div class="featured-box-col1 wow fadeInRight delay-06s">
+              <i class="fa-dashboard"></i>
+            </div>
+            <div class="featured-box-col2 wow fadeInRight delay-06s">
+              <h3>See only what you want to see</h3>
+              <p>Built in filters allow you to hide elements you don't want to see, allowing you focus only on the components
+                that you've written</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--main-section alabaster-end-->
 
+  <section class="main-section team" id="team">
+    <!--main-section team-start-->
+    <div class="container">
+      <h2>MEET OUR DEVELOPERS</h2>
+      <div class="team-leader-block clearfix">
 
-	<!-- Start price Area -->
-	<section class="price-area section-gap" id="price">
-		<div class="container">
-			<div class="row d-flex justify-content-center">
-				<div class="menu-content pb-60 col-lg-8">
-					<div class="title text-center">
-						<h1 class="mb-10">Choose the Perfect Plan for you</h1>
-						<p>Who are in extremely love with eco friendly system.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-4">
-					<div class="single-price">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h4>Standard</h4>
-								<p>For the <br>individuals</p>
-							</div>
-							<div class="top-right">
-								<h1>£199</h1>
-							</div>
-						</div>
-						<div class="bottom-sec">
-							<p>
-								“Few would argue that, despite the advancements
-							</p>
-						</div>
-						<div class="end-sec">
-							<ul>
-								<li>2.5 GB Free Photos</li>
-								<li>Secure Online Transfer Indeed</li>
-								<li>Unlimited Styles for interface</li>
-								<li>Reliable Customer Service</li>
-								<li>Manual Backup Provided</li>
-							</ul>
-							<button class="primary-btn price-btn mt-20">Purchase Plan</button>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4">
-					<div class="single-price">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h4>Business</h4>
-								<p>For the <br>small Company</p>
-							</div>
-							<div class="top-right">
-								<h1>£399</h1>
-							</div>
-						</div>
-						<div class="bottom-sec">
-							<p>
-								“Few would argue that, despite the advancements
-							</p>
-						</div>
-						<div class="end-sec">
-							<ul>
-								<li>2.5 GB Free Photos</li>
-								<li>Secure Online Transfer Indeed</li>
-								<li>Unlimited Styles for interface</li>
-								<li>Reliable Customer Service</li>
-								<li>Manual Backup Provided</li>
-							</ul>
-							<button class="primary-btn price-btn mt-20">Purchase Plan</button>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4">
-					<div class="single-price">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h4>Ultimate</h4>
-								<p>For the <br>large Company</p>
-							</div>
-							<div class="top-right">
-								<h1>£499</h1>
-							</div>
-						</div>
-						<div class="bottom-sec">
-							<p>
-								“Few would argue that, despite the advancements
-							</p>
-						</div>
-						<div class="end-sec">
-							<ul>
-								<li>2.5 GB Free Photos</li>
-								<li>Secure Online Transfer Indeed</li>
-								<li>Unlimited Styles for interface</li>
-								<li>Reliable Customer Service</li>
-								<li>Manual Backup Provided</li>
-							</ul>
-							<button class="primary-btn price-btn mt-20">Purchase Plan</button>
-						</div>
-					</div>
-				</div>
+        <!-- ANDY -->
+        <div class="team-leader-box">
+          <div class="team-leader wow fadeInDown delay-03s">
+            <div class="team-leader-shadow">
+              <a href="#"></a>
+            </div>
+            <img src="" alt="Andy Tran">
+            <ul>
+              <li>
+                <a href="https://github.com/andyxtran" class="fa-github"></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/andy-x-tran/" class="fa-linkedin"></a>
+              </li>
+            </ul>
+          </div>
+          <h3 class="wow fadeInDown delay-03s">
+            Andy Tran
+          </h3>
+          <span class="wow fadeInDown delay-03s">
+            Software Engineer
+          </span>
+          <p class="wow fadeInDown delay-03s">
+            Handy Andy
+          </p>
+        </div>
 
-			</div>
-		</div>
-	</section>
-	<!-- End price Area -->
+        <!-- CARSON -->
+        <div class="team-leader-box">
+          <div class="team-leader  wow fadeInDown delay-06s">
+            <div class="team-leader-shadow">
+              <a href="#"></a>
+            </div>
+            <img src="" alt="Carson Chen">
+            <ul>
+              <li>
+                <a href="https://github.com/carsoncychen" class="fa-github"></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/carsoncychen/" class="fa-linkedin"></a>
+              </li>
+            </ul>
+          </div>
 
-	<!-- Start testomial Area -->
-	<section class="testomial-area section-gap">
-		<div class="container">
-			<div class="row d-flex justify-content-center">
-				<div class="menu-content pb-60 col-lg-8">
-					<div class="title text-center">
-						<h1 class="mb-10">Testimonial from our Clients</h1>
-						<p>Who are in extremely love with eco friendly system.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="active-tstimonial-carusel">
-					<div class="single-testimonial item">
-						<img class="mx-auto" src="img/t1.png" alt="">
-						<p class="desc">
-							Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner,
-							speaker, projector, hardware and more. laptop accessory
-						</p>
-						<h4>Mark Alviro Wiens</h4>
-						<p>
-							CEO at Google
-						</p>
-					</div>
-					<div class="single-testimonial item">
-						<img class="mx-auto" src="img/t2.png" alt="">
-						<p class="desc">
-							Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner,
-							speaker, projector, hardware and more. laptop accessory
-						</p>
-						<h4>Mark Alviro Wiens</h4>
-						<p>
-							CEO at Google
-						</p>
-					</div>
-					<div class="single-testimonial item">
-						<img class="mx-auto" src="img/t3.png" alt="">
-						<p class="desc">
-							Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner,
-							speaker, projector, hardware and more. laptop accessory
-						</p>
-						<h4>Mark Alviro Wiens</h4>
-						<p>
-							CEO at Google
-						</p>
-					</div>
-					<div class="single-testimonial item">
-						<img class="mx-auto" src="img/t1.png" alt="">
-						<p class="desc">
-							Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner,
-							speaker, projector, hardware and more. laptop accessory
-						</p>
-						<h4>Mark Alviro Wiens</h4>
-						<p>
-							CEO at Google
-						</p>
-					</div>
-					<div class="single-testimonial item">
-						<img class="mx-auto" src="img/t2.png" alt="">
-						<p class="desc">
-							Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner,
-							speaker, projector, hardware and more. laptop accessory
-						</p>
-						<h4>Mark Alviro Wiens</h4>
-						<p>
-							CEO at Google
-						</p>
-					</div>
-					<div class="single-testimonial item">
-						<img class="mx-auto" src="img/t3.png" alt="">
-						<p class="desc">
-							Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner,
-							speaker, projector, hardware and more. laptop accessory
-						</p>
-						<h4>Mark Alviro Wiens</h4>
-						<p>
-							CEO at Google
-						</p>
-					</div>
-					<div class="single-testimonial item">
-						<img class="mx-auto" src="img/t1.png" alt="">
-						<p class="desc">
-							Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner,
-							speaker, projector, hardware and more. laptop accessory
-						</p>
-						<h4>Mark Alviro Wiens</h4>
-						<p>
-							CEO at Google
-						</p>
-					</div>
-					<div class="single-testimonial item">
-						<img class="mx-auto" src="img/t2.png" alt="">
-						<p class="desc">
-							Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner,
-							speaker, projector, hardware and more. laptop accessory
-						</p>
-						<h4>Mark Alviro Wiens</h4>
-						<p>
-							CEO at Google
-						</p>
-					</div>
-					<div class="single-testimonial item">
-						<img class="mx-auto" src="img/t3.png" alt="">
-						<p class="desc">
-							Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner,
-							speaker, projector, hardware and more. laptop accessory
-						</p>
-						<h4>Mark Alviro Wiens</h4>
-						<p>
-							CEO at Google
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End testomial Area -->
+          <h3 class="wow fadeInDown delay-06s">
+            Carson Chen
+          </h3>
+          <span class="wow fadeInDown delay-06s">
+            Software Engineer
+          </span>
+          <p class="wow fadeInDown delay-06s">
+            Code Master
+          </p>
+        </div>
 
-	<!-- Start latest-blog Area -->
-	<section class="latest-blog-area section-gap" id="blog">
-		<div class="container">
-			<div class="row d-flex justify-content-center">
-				<div class="menu-content pb-60 col-lg-8">
-					<div class="title text-center">
-						<h1 class="mb-10">Latest News from our Blog</h1>
-						<p>Who are in extremely love with eco friendly system.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-6 single-blog">
-					<img class="img-fluid" src="img/b1.jpg" alt="">
-					<ul class="tags">
-						<li><a href="#">Travel</a></li>
-						<li><a href="#">Life style</a></li>
-					</ul>
-					<a href="#">
-						<h4>Portable latest Fashion for young women</h4>
-					</a>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-						dolore.
-					</p>
-					<p class="post-date">31st January, 2018</p>
-				</div>
-				<div class="col-lg-6 single-blog">
-					<img class="img-fluid" src="img/b2.jpg" alt="">
-					<ul class="tags">
-						<li><a href="#">Travel</a></li>
-						<li><a href="#">Life style</a></li>
-					</ul>
-					<a href="#">
-						<h4>Portable latest Fashion for young women</h4>
-					</a>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-						dolore.
-					</p>
-					<p class="post-date">31st January, 2018</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End latest-blog Area -->
+        <!-- DANIEL -->
+        <div class="team-leader-box">
+          <div class="team-leader wow fadeInDown delay-09s">
+            <div class="team-leader-shadow">
+              <a href="#"></a>
+            </div>
+            <img src="" alt="Daniel Wu">
+            <ul>
+              <li>
+                <a href="https://github.com/wdanni" class="fa-github"></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/dnwu/" class="fa-linkedin"></a>
+              </li>
+            </ul>
+          </div>
+          
+          <h3 class="wow fadeInDown delay-09s">
+            Daniel Wu
+          </h3>
+          <span class="wow fadeInDown delay-09s">
+            Software Engineer
+          </span>
+          <p class="wow fadeInDown delay-09s">
+            Name changer
+          </p>
+        </div>
+
+        <!-- JINSUNG -->
+        <div class="team-leader-box">
+          <div class="team-leader  wow fadeInDown delay-12s">
+            <div class="team-leader-shadow">
+              <a href="#"></a>
+            </div>
+            <img src="" alt="Jinsung Park">
+            <ul>
+              <li>
+                <a href="https://github.com/jsliapark" class="fa-github"></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/jsliapark/" class="fa-linkedin"></a>
+              </li>
+            </ul>
+          </div>
+
+          <h3 class="wow fadeInDown delay-12s">
+            Jinsung Park
+          </h3>
+          <span class="wow fadeInDown delay-12s">
+            Software Engineer
+          </span>
+          <p class="wow fadeInDown delay-12s">
+            Almost file deleter
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!--main-section team-end-->
+
+  <!-- Typing Section Begin -->
+  <section class="typing">
+    <div class='console-container'>
+      <span id='text'></span>
+      <div class='console-underscore' id='console'>&#95;</div>
+    </div>
+  </section>
+  <!-- Typing Section End -->
+
+  <script type="text/javascript" src="build/bundle.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function (e) {
+      $('#test').scrollToFixed();
+      $('.res-nav_click').click(function () {
+        $('.main-nav').slideToggle();
+        return false
+
+      });
+
+    });
+  </script>
+
+  <script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset: 100
+      }
+    );
+    wow.init();
+  </script>
 
 
-	<!-- start footer Area -->
-	<footer class="footer-area section-gap">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3  col-md-12">
-					<div class="single-footer-widget">
-						<h6>Top Products</h6>
-						<ul class="footer-nav">
-							<li><a href="#">Managed Website</a></li>
-							<li><a href="#">Manage Reputation</a></li>
-							<li><a href="#">Power Tools</a></li>
-							<li><a href="#">Marketing Service</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-6  col-md-12">
-					<div class="single-footer-widget newsletter">
-						<h6>Newsletter</h6>
-						<p>You can trust us. we only send promo offers, not a single spam.</p>
-						<div id="mc_embed_signup">
-							<form target="_blank" novalidate="true"
-								action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-								method="get" class="form-inline">
+  <script type="text/javascript">
+    $(window).load(function () {
 
-								<div class="form-group row" style="width: 100%">
-									<div class="col-lg-8 col-md-12">
-										<input name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''"
-											onblur="this.placeholder = 'Enter Email '" required="" type="email">
-										<div style="position: absolute; left: -5000px;">
-											<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-										</div>
-									</div>
+      $('.main-nav li a, .servicelink').bind('click', function (event) {
+        var $anchor = $(this);
 
-									<div class="col-lg-4 col-md-12">
-										<button class="nw-btn primary-btn">Subscribe<span class="lnr lnr-arrow-right"></span></button>
-									</div>
-								</div>
-								<div class="info"></div>
-							</form>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3  col-md-12">
-					<div class="single-footer-widget mail-chimp">
-						<h6 class="mb-20">Instragram Feed</h6>
-						<ul class="instafeed d-flex flex-wrap">
-							<li><img src="img/i1.jpg" alt=""></li>
-							<li><img src="img/i2.jpg" alt=""></li>
-							<li><img src="img/i3.jpg" alt=""></li>
-							<li><img src="img/i4.jpg" alt=""></li>
-							<li><img src="img/i5.jpg" alt=""></li>
-							<li><img src="img/i6.jpg" alt=""></li>
-							<li><img src="img/i7.jpg" alt=""></li>
-							<li><img src="img/i8.jpg" alt=""></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+        $('html, body').stop().animate({
+          scrollTop: $($anchor.attr('href')).offset().top - 102
+        }, 1500, 'easeInOutExpo');
+        /*
+        if you don't want to use the easing effects:
+        $('html, body').stop().animate({
+          scrollTop: $($anchor.attr('href')).offset().top
+        }, 1000);
+        */
+        if ($(window).width() < 768) {
+          $('.main-nav').hide();
+        }
+        event.preventDefault();
+      });
+    })
+  </script>
 
-			<div class="row footer-bottom d-flex justify-content-between">
-				<p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					Copyright &copy;
-					<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i
-						class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				</p>
-				<div class="col-lg-4 col-sm-12 footer-social">
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-dribbble"></i></a>
-					<a href="#"><i class="fa fa-behance"></i></a>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- End footer Area -->
+  <script type="text/javascript">
+    $(window).load(function () {
 
-	<script src="js/vendor/jquery-2.2.4.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-		crossorigin="anonymous"></script>
-	<script src="js/vendor/bootstrap.min.js"></script>
-	<script type="text/javascript"
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-	<script src="js/easing.min.js"></script>
-	<script src="js/hoverIntent.js"></script>
-	<script src="js/superfish.min.js"></script>
-	<script src="js/jquery.ajaxchimp.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.sticky.js"></script>
-	<script src="js/jquery.nice-select.min.js"></script>
-	<script src="js/parallax.min.js"></script>
-	<script src="js/mail-script.js"></script>
-	<script src="js/main.js"></script>
+
+      var $container = $('.portfolioContainer'),
+        $body = $('body'),
+        colW = 375,
+        columns = null;
+
+
+      $container.isotope({
+        // disable window resizing
+        resizable: true,
+        masonry: {
+          columnWidth: colW
+        }
+      });
+
+      $(window).smartresize(function () {
+        // check if columns has changed
+        var currentColumns = Math.floor(($body.width() - 30) / colW);
+        if (currentColumns !== columns) {
+          // set new column count
+          columns = currentColumns;
+          // apply width to container manually, then trigger relayout
+          $container.width(columns * colW)
+            .isotope('reLayout');
+        }
+
+      }).smartresize(); // trigger resize to set container width
+      $('.portfolioFilter a').click(function () {
+        $('.portfolioFilter .current').removeClass('current');
+        $(this).addClass('current');
+
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+
+          filter: selector,
+        });
+        return false;
+      });
+
+    });
+  </script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src='./js/typing.js'></script>
+
 </body>
 
 </html>
