@@ -6,20 +6,21 @@
   <meta name="viewport" content="width=device-width, maximum-scale=1">
 
   <!-- key words -->
-  <meta name="keywords" content="React, ReactION, Developer Tool, Javascript, ES6, VS Code, Visual Studio Code Extension, Developer, React Developer, D3, Create React App, Learn programming, Visualization, React 16, React 15, React fiber, fiber, redux, react redux, router, react router, browser router, redux store, d3 tree, d3 v5, react visualizer, component visualizer, react component visualizer, react component"
-  />
+  <meta name="keywords"
+    content="React, ReactION, Developer Tool, Javascript, ES6, VS Code, Visual Studio Code Extension, Developer, React Developer, D3, Create React App, Learn programming, Visualization, React 16, React 15, React fiber, fiber, redux, react redux, router, react router, browser router, redux store, d3 tree, d3 v5, react visualizer, component visualizer, react component visualizer, react component" />
 
   <title>ReactION</title>
   <link rel="shortcut icon" href="img/logo.png" type="img/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600'
+  <link
+    href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600'
     rel='stylesheet' type='text/css'>
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <link href="css/style.css" rel="stylesheet" type="text/css">
 
@@ -68,24 +69,24 @@
         }
         ; var i = t.getElementsByTagName("script")[0]; i.parentNode.insertBefore(r, i)
         ; function s(e, t) {
-        e.prototype[t] = function () {
-          this._q.push([t].concat(Array.prototype.slice.call(arguments, 0))); return this
-        }
+          e.prototype[t] = function () {
+            this._q.push([t].concat(Array.prototype.slice.call(arguments, 0))); return this
+          }
         }
       var o = function () { this._q = []; return this }
         ; var a = ["add", "append", "clearAll", "prepend", "set", "setOnce", "unset"]
         ; for (var u = 0; u < a.length; u++) { s(o, a[u]) } n.Identify = o; var c = function () {
-        this._q = []
-          ; return this
+          this._q = []
+            ; return this
         }
         ; var l = ["setProductId", "setQuantity", "setPrice", "setRevenueType", "setEventProperties"]
         ; for (var p = 0; p < l.length; p++) { s(c, l[p]) } n.Revenue = c
         ; var d = ["init", "logEvent", "logRevenue", "setUserId", "setUserProperties", "setOptOut", "setVersionName", "setDomain", "setDeviceId", "setGlobalUserProperties", "identify", "clearUserProperties", "setGroup", "logRevenueV2", "regenerateDeviceId", "logEventWithTimestamp", "logEventWithGroups", "setSessionId", "resetSessionId"]
         ; function v(e) {
           function t(t) {
-          e[t] = function () {
-            e._q.push([t].concat(Array.prototype.slice.call(arguments, 0)))
-          }
+            e[t] = function () {
+              e._q.push([t].concat(Array.prototype.slice.call(arguments, 0)))
+            }
           }
           for (var n = 0; n < d.length; n++) { t(d[n]) }
         } v(n); n.getInstance = function (e) {
@@ -100,11 +101,11 @@
       amplitude.getInstance().logEvent('PageView');
     });
   </script>
-    <script src="particles.js">
-    particlesJS.load('particles-js', 'assets/particles.json', function() {
-  console.log('callback - particles.js config loaded');
-});
-    </script>
+  <script src="particles.js">
+    particlesJS.load('particles-js', 'assets/particles.json', function () {
+      console.log('callback - particles.js config loaded');
+    });
+  </script>
 
 </head>
 
@@ -112,28 +113,29 @@
   <!--header-start-->
   <header class="header" id="header">
     <div id="particles-js">
-    <div class="container">
-    <!--particles-end-->
-      <figure class="logo animated fadeInDown delay-07s">
-        <img src="img/logo.png" alt="React Sight, a visualizer for React applications">
-      </figure>
-      <h1 class="animated fadeInDown delay-07s" id="logo-header">ReactION</h1>
-      <ul class="we-create animated fadeInUp delay-1s">
-        <li id="header-description">
-          React Component Visualizer for VS Code
-        </li>
-        <br/>
-        <br/>
-        <br/>
-        <a class="github-button" href="https://github.com/ReactION-js/ReactION" data-size="large" aria-label="Follow @React-Sight on GitHub">
-          ReactION GITHUB
-        </a>
-        <a class="github-button" href="https://github.com/ReactION-js/ReactION" data-size="large" data-show-count="true"
-          aria-label="https://github.com/ReactION-js/ReactION">Star</a>
-      </ul>
-      <a id="get-started-btn" class="link animated fadeInUp delay-1s servicelink" href="#download">Learn More</a>
+      <div class="container">
+        <!--particles-end-->
+        <figure class="logo animated fadeInDown delay-07s">
+          <img src="img/logo.png" alt="ReactION, a visualizer for React applications">
+        </figure>
+        <h1 class="animated fadeInDown delay-07s" id="logo-header">ReactION</h1>
+        <ul class="we-create animated fadeInUp delay-1s">
+          <li id="header-description">
+            React Component Visualizer for VS Code
+          </li>
+          <br />
+          <br />
+          <br />
+          <a class="github-button" href="https://github.com/ReactION-js/ReactION" data-size="large"
+            aria-label="Follow @React-Sight on GitHub">
+            ReactION GITHUB
+          </a>
+          <a class="github-button" href="https://github.com/ReactION-js/ReactION" data-size="large"
+            data-show-count="true" aria-label="https://github.com/ReactION-js/ReactION">Star</a>
+        </ul>
+        <a id="get-started-btn" class="link animated fadeInUp delay-1s servicelink" href="#download">Learn More</a>
+      </div>
     </div>
-  </div>
   </header>
   <!--header-end-->
 
@@ -186,21 +188,25 @@
             </div>
             <div class="service-list-col2">
               <h3>Enable React DevTools</h3>
-              React Sight requires
-              <a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi">React Dev Tools</a> for reading information about your App. Simply add to Chrome if you don't have it installed
+              ReactION requires
+              <a
+                href="https://www.google.com/chrome/?brand=CHBF&ds_kid=43700010199508114&utm_source=bing&utm_medium=cpc&utm_campaign=1005992%20%7C%20Chrome%20Win10%20%7C%20DR%20%7C%20ESS01%20%7C%20NA%20%7C%20US%20%7C%20en%20%7C%20Desk%20%7C%20BING%20SEM%20%7C%20BKWS%20~%20Exact&utm_term=download%20chrome&utm_content=Download%20-%20Exact&gclid=CMKZxovzluECFcLCDQodh8sHtw&gclsrc=ds">Google
+                Chrome</a> for reading information about your App. Simply download Chrome if you don't have it
+              installed
             </div>
           </div>
 
-          <!-- install react sight -->
+          <!-- install ReactION -->
           <div class="service-list">
             <div class="service-list-col1">
               <i class="fa fa-chrome" aria-hidden="true"></i>
             </div>
             <div class="service-list-col2">
-              <h3>Add React Sight to Chrome</h3>
+              <h3>Add ReactION to VS Code</h3>
               Install
-              <a href="https://chrome.google.com/webstore/detail/react-sight/aalppolilappfakpmdfdkpppdnhpgifn">React Sight</a> from the Chrome web store.
-              <br> For local projects, check 'Allow access to file URLs' on the extensions page
+              <a href="https://marketplace.visualstudio.com/items?itemName=ReactION-js.ReactION">React
+                ION</a> from the VS Code Marketplace.
+              <br>
             </div>
           </div>
 
@@ -211,7 +217,7 @@
             </div>
             <div class="service-list-col2">
               <h3>Run your Application</h3>
-              Open your React application, or open (almost!) any website running React!
+              Open your React application inside the VS Code
             </div>
           </div>
 
@@ -221,8 +227,8 @@
               <i class="fa fa-wrench" aria-hidden="true"></i>
             </div>
             <div class="service-list-col2">
-              <h3>Open React Sight</h3>
-              Open the Chrome Developer Tools and click the React Sight panel
+              <h3>Open ReactION</h3>
+              Simply click on the ReactION logo on the left panel!
             </div>
           </div>
 
@@ -261,7 +267,8 @@
             </div>
             <div class="featured-box-col2 wow fadeInRight delay-02s">
               <h3>No Set up required</h3>
-              <p>ReactION requires NO modification to your codebase, so using it is as simple as installing our VS Code Extension</p>
+              <p>ReactION requires NO modification to your codebase, so using it is as simple as installing our VS Code
+                Extension</p>
             </div>
           </div>
 
@@ -270,8 +277,9 @@
               <i class="fa-flash"></i>
             </div>
             <div class="featured-box-col2 wow fadeInRight delay-02s">
-              <h3>Works with All your favorite libraries</h3>
-              <p>React-Sight supports React 14.7+ (including Fiber), React Router v4, React Redux, and more</p>
+              <h3>No more switching the development environment</h3>
+              <p>ReactION lets you stay in one development environment so you can concentrate on coding your application
+              </p>
             </div>
           </div>
 
@@ -280,8 +288,9 @@
               <i class="fa-rocket"></i>
             </div>
             <div class="featured-box-col2 wow fadeInRight delay-04s">
-              <h3>Built for Speed</h3>
-              <p>React-Sight is light-weight and unobtrusive, and will show you how your Application is working</p>
+              <h3>HTML Browser Preview</h3>
+              <p>When running ReactION extension, you can see the well organized React components tree view inside VS
+                Code</p>
             </div>
           </div>
           <div class="featured-box">
@@ -289,9 +298,9 @@
               <i class="fa-dashboard"></i>
             </div>
             <div class="featured-box-col2 wow fadeInRight delay-06s">
-              <h3>See only what you want to see</h3>
-              <p>Built in filters allow you to hide elements you don't want to see, allowing you focus only on the components
-                that you've written</p>
+              <h3>Custom your React component tree</h3>
+              <p>Our tree is collapsible, zoomable, and grabbable. Move around, play with it, and only see what you want
+                to see!</p>
             </div>
           </div>
         </div>
@@ -377,7 +386,7 @@
               </li>
             </ul>
           </div>
-          
+
           <h3 class="wow fadeInDown delay-09s">
             Daniel Wu
           </h3>
@@ -413,7 +422,7 @@
             Software Engineer
           </span>
           <p class="wow fadeInDown delay-12s">
-            Almost file deleter
+            (Almost) file deleter
           </p>
         </div>
 

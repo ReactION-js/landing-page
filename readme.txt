@@ -1,5 +1,5 @@
-Welcome to React Sight! 
+Welcome to ReactION! 
 
 Please visit our primary repository --->
 
-Looking for our Chrome Extension? [Link to Chrome Store]
+Looking for our VS Code Extension? [Link to Chrome Store]
