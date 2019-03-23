@@ -1,4 +1,4 @@
-# Welcome to React Sight! 
+# Welcome to ReactION! 
 
 ReactION is a react component visualizer for VS code!
 
