@@ -18,7 +18,7 @@
 	/****Ipad Portrait 768 Container 750 ****/
 	body{ font-size:13px;}
 	p{ line-height:20px ;}
-	.header h1{ font-size:46px;}
+	.header h1{ font-size:90px;}
 	.main-nav ul li a{ padding:14px;}
 	.small-logo{ padding:0 20px;}
 	h2{ font-size:30px}
@@ -52,7 +52,7 @@
 	p{ line-height:18px;}
 	.service-list{ font-size:12px; margin-bottom:20px;}
 	.we-create li{ font-size:13px; padding:0 0 0 8px}
-	.header h1{ font-size:28px;}
+	.header h1{ font-size:50px;}
 	.header{ padding:60px 0;}
 	.main-section{ padding:60px 0 70px;}
 	.main-nav{ display:none; position:absolute; left:0; width:100%; top:74px; margin:0 auto; flote : none; background:#fff;}
@@ -77,7 +77,7 @@
 	.business-talking a{ padding:10px 25px; font-size:14px;}
 	.main-section.contact{ padding:60px 0 70px}
 	.client-part-haead{ font-size:20px; line-height:30px;}
-	.link{ font-size:14px; padding:10px 25px;}
+	.link{ font-size:16px; padding:15px 35px;}
 	.logo{ width:100px;}
 	.main-section.contact{ background-size:contain;}
 	.Portfolio-nav li a{ padding:5px 16px;}
