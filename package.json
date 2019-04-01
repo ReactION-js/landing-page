@@ -1,0 +1,19 @@
+{
+  "name": "ReactION Landing Page",
+  "version": "1.0.0",
+  "description": "our website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -p",
+    "start": "webpack -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "json-formatter-js": "2.2.1",
+    "webpack": "4.27.1",
+    "webpack-cli": "^3.3.0"
+  }
+}
