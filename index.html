@@ -11,11 +11,10 @@
 
   <title>ReactION</title>
   <link rel="shortcut icon" href="img/logo.png" type="img/x-icon">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-
-  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600'
-    rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600"
+    rel="stylesheet" type="text/css">
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -35,81 +34,21 @@
   <script type="text/javascript" src="js/jquery.isotope.js"></script>
   <script type="text/javascript" src="js/wow.js"></script>
   <script type="text/javascript" src="js/classie.js"></script>
+  <script type="text/javascript" src="./particles/particles.js" defer="defer"></script>
+  <script type="text/javascript" src="./particles/app.js" defer="defer"></script>
   <!-- disable contact form for github pages, replace with free formspree.io -->
   <!-- <script src="contactform/contactform.js"></script> -->
 
   <!-- load the d3.js library -->
   <script src="https://d3js.org/d3.v4.min.js"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119523227-1"></script>
-
-  <!-- Google Analytics -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-119523227-1');
-  </script>
-
-  <!-- Amplitude Analytics -->
-  <script type="text/javascript">
-    (function (e, t) {
-      var n = e.amplitude || { _q: [], _iq: {} }; var r = t.createElement("script")
-        ; r.type = "text/javascript"; r.async = true
-        ; r.src = "https://cdn.amplitude.com/libs/amplitude-4.2.1-min.gz.js"
-        ; r.onload = function () {
-          if (e.amplitude.runQueuedFunctions) {
-            e.amplitude.runQueuedFunctions()
-          } else {
-            console.log("[Amplitude] Error: could not load SDK")
-          }
-        }
-        ; var i = t.getElementsByTagName("script")[0]; i.parentNode.insertBefore(r, i)
-        ; function s(e, t) {
-        e.prototype[t] = function () {
-          this._q.push([t].concat(Array.prototype.slice.call(arguments, 0))); return this
-        }
-        }
-      var o = function () { this._q = []; return this }
-        ; var a = ["add", "append", "clearAll", "prepend", "set", "setOnce", "unset"]
-        ; for (var u = 0; u < a.length; u++) { s(o, a[u]) } n.Identify = o; var c = function () {
-        this._q = []
-          ; return this
-        }
-        ; var l = ["setProductId", "setQuantity", "setPrice", "setRevenueType", "setEventProperties"]
-        ; for (var p = 0; p < l.length; p++) { s(c, l[p]) } n.Revenue = c
-        ; var d = ["init", "logEvent", "logRevenue", "setUserId", "setUserProperties", "setOptOut", "setVersionName", "setDomain", "setDeviceId", "setGlobalUserProperties", "identify", "clearUserProperties", "setGroup", "logRevenueV2", "regenerateDeviceId", "logEventWithTimestamp", "logEventWithGroups", "setSessionId", "resetSessionId"]
-        ; function v(e) {
-          function t(t) {
-          e[t] = function () {
-            e._q.push([t].concat(Array.prototype.slice.call(arguments, 0)))
-          }
-          }
-          for (var n = 0; n < d.length; n++) { t(d[n]) }
-        } v(n); n.getInstance = function (e) {
-          e = (!e || e.length === 0 ? "$default_instance" : e).toLowerCase()
-            ; if (!n._iq.hasOwnProperty(e)) { n._iq[e] = { _q: [] }; v(n._iq[e]) } return n._iq[e]
-        }
-        ; e.amplitude = n
-    })(window, document);
-
-    amplitude.getInstance().init("2a4335eb07211f28ecc3964934659998");
-    window.addEventListener('DOMContentLoaded', () => {
-      amplitude.getInstance().logEvent('PageView');
-    });
-  </script>
-    <script src="particles.js">
-    particlesJS.load('particles-js', 'assets/particles.json', function() {
-  console.log('callback - particles.js config loaded');
-});
-    </script>
 
 </head>
 
 <body>
   <!--header-start-->
   <header class="header" id="header">
+    <div id="particles-js"></div>
+    <div class="main-wrapper">
     <div class="container">
       <figure class="logo animated fadeInDown delay-07s">
         <img src="img/logo.png" alt="ReactION, a React component visualizer for VS Code">
@@ -125,34 +64,28 @@
       </ul>
       <div class="home-buttons">
         <a id="download-btn" class="link animated fadeInUp delay-1s servicelink" href="https://marketplace.visualstudio.com/items?itemName=ReactION-js.ReactION" target="_blank">Download</a>
-        <a id="github-button" class="github-link animated fadeInUp delay-1s serviceLink" href="https://github.com/ReactION-js/ReactION" data-size="large" data-show-count="true"
-        aria-label="Start ReactION on GitHub">GitHub</a>
+        <a id="github-button" class="github-link animated fadeInUp delay-1s serviceLink" href="https://github.com/ReactION-js/ReactION" aria-label="Start ReactION on GitHub" target="_blank">GitHub</a>
       </div>
+    </div>
     </div>
   </header>
   <!--header-end-->
 
   <!--main-nav-start-->
-  <nav class="main-nav-outer" id="test">
+  <nav class="main-nav-outer " id="test">
     <div class="container" id="header-container">
       <ul class="main-nav">
         <li>
-          <a href="#header">Home</a>
-        </li>
-        <li>
-          <a href="#features">Features</a>
+          <a href="#features">Concept</a>
         </li>
         <li>
           <a href="#demo">Demo</a>
         </li>
-        <li class="small-logo">
-          <a href="#header">
-            <img src="img/logo.png" alt="" style="width: 50px;">
-          </a>
-        </li>
         <li>
-          <a href="#setup">Setup</a>
-        </li>
+        <a href="#header">
+          <img src="img/logo.png" alt="" style="width: 50px;">
+        </a>
+      </li>
         <li>
           <a href="#about-us">About Us</a>
         </li>
@@ -167,222 +100,226 @@
   </nav>
   <!--main-nav-end-->
 
-  <section class="main-section alabaster" id="features">
-    <!--main-section alabaster-start-->
-    <div class="container">
-        <h2>Features</h2>
+  <!--FEATURES-start-->
+  <section class="main-section" id="features">
+      <div class="container">
+        <h2>
+          Concept
+        </h2>
+        <br>
         <div class="row">
-          <P class="padding-b"></P>
-          <figure class="wow fadeInLeft">
-              <h3 align="center">A React development environment inside your VS Code editor</h3>
-              <h5 align="center"><i>ReactION's hot-reloading HTML previewer and component visualizer helps you streamline your React development workflow</i></h5>
-              <br>
-            <img id="samples" src="./img/ReactION-sample.png" alt="ReactION Features">
+          <div class="col-lg-4 col-sm-6 wow fadeInLeft delay-05s">
+  
+            <!-- introduction -->
+            <div class="service-list">
+              <div class="service-list-col2">
+                <h3>React IDE inside your VS Code editor</h3>
+                ReactION's hot-reloading HTML previewer and component visualizer helps you streamline your React development workflow.
+              </div>
+            </div>
+  
+            <!-- Tree to Code -->
+            <div class="service-list">
+              <div class="service-list-col2">
+                <h3>From Tree to Codes</h3>
+                ReactION will open up the React file that is associated with the particular component on the tree view when you click it.
+              </div>
+            </div>
+  
+            <!-- Color Coded -->
+            <div class="service-list">
+              <div class="service-list-col2">
+                <h3>Color Coded</h3>
+                the React tree nodes will have different colors based on its current state and props, including the latest component change.
+              </div>
+            </div>
+  
+            <!-- Debug -->
+            <div class="service-list">
+              <div class="service-list-col2">
+                <h3>Debug your React</h3>
+                Time through different state changes of your React application.
+              </div>
+            </div>
+          </div>
+          <figure class="col-lg-8 col-sm-6  text-right wow fadeInRight delay-02s">
+            <div id="samples">
+              <img id="samples" src="./img/ReactION-sample.png" alt="ReactION Features">
+            </div>
           </figure>
         </div>
       </div>
-  </section>
-  <!--main-section alabaster-end-->
+    </section>
+    <!--FEATURES-end-->
 
-  <section class="main-section alabaster" id="demo">
-    <!--main-section alabaster-start-->
-    <div class="container">
-      <div class="row">
-        <h2>Demo</h2>
-        <P class="padding-b"></P>
-        <div class="featured-box">
-          <div class="featured-box-col2 wow fadeInRight delay-04s">
-              <h3 align="center">Current Product</h3>
-              <h5 align="center"><i>ReactION is currently in active development and we welcome any constructive feedback or contributions to this product</i></h5>
-              <div id="samples">
-                <img src="./img/Demo.gif" alt="ReactION features">
+    <!--DEMO-start-->
+    <section class="main-section alabaster" id="demo">
+        <div class="container">
+          <h2>
+            Demo
+          </h2>
+          <br>
+          <div class="row">
+            <div class="col-lg-4 col-sm-6 wow fadeInLeft delay-05s">
+          
+              <!-- Workin in progress -->
+          <div class="service-list">
+              <div class="service-list-col2">
+                <h3>Demo of current product</h3>
+                ReactION is open source and in active development. <br>
+                Contribute with us on <a href="https://github.com/ReactION-js/ReactION">GitHub!</a>
               </div>
+            </div>
+
+              <!-- No Setup -->
+              <div class="service-list">
+                <div class="service-list-col2">
+                  <h3>No Setup</h3>
+                  ReactION requires NO modification to your codebase, but installing the VS Code extension.
+                </div>
+              </div>
+    
+              <!-- Live Edits -->
+              <div class="service-list">
+                <div class="service-list-col2">
+                  <h3>Live Edits</h3>
+                  Ability to edit components on the HTML preview and see the component hierarchy on the side panel.
+                </div>
+              </div>
+
+              <!-- Themes -->
+              <div class="service-list">
+                <div class="service-list-col2">
+                  <h3>Hover Feature</h3>
+                  Hover over the tree nodes to see the component's props and/or state.
+                </div>
+              </div>
+
+              <!-- Embedded Webview -->
+              <div class="service-list">
+                <div class="service-list-col2">
+                  <h3>Embedded Browser</h3>
+                  Embedded browser view is available in the Command Palette under "ReactION: Embedded Webview".
+                </div>
+              </div>
+            </div>
+            <figure class="col-lg-8 col-sm-6 wow fadeInRight delay-02s">
+              <div id="samples">
+                <img src="./img/Demo.gif" alt="ReactION Demo">
+              </div>
+            </figure>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <!--main-section alabaster-end-->
+      </section>
+      <!--DEMO-end-->
 
-  <section class="main-section" id="setup">
-    <!--main-section-start-->
+      <!--ABOUT US-start-->
+  <section class="main-section" id="about-us">
     <div class="container">
-      <h2>
-        Setup
-      </h2>
-      <br>
-      <div class="row">
-        <div class="col-lg-4 col-sm-6 wow fadeInLeft delay-05s">
-
-          <!-- install react dev tools -->
-          <div class="service-list">
-            <div class="service-list-col1">
-              <i class="fa fa-chrome" aria-hidden="true"></i>
-            </div>
-            <div class="service-list-col2">
-              <h3>Download Google Chrome</h3>
-              ReactION needs chrome to parse through your React application.
-            </div>
-          </div>
-
-          <!-- install react sight -->
-          <div class="service-list">
-            <div class="service-list-col1">
-              <i class="fa fa-chrome" aria-hidden="true"></i>
-            </div>
-            <div class="service-list-col2">
-              <h3>Add ReactION to VS Code</h3>
-              Install
-              <a href="https://marketplace.visualstudio.com/items?itemName=ReactION-js.ReactION">ReactION</a> from the Microsoft Marketplace.
-            </div>
-          </div>
-
-          <!-- Run your application -->
-          <div class="service-list">
-            <div class="service-list-col1">
-              <i class="fa fa-desktop" aria-hidden="true"></i>
-            </div>
-            <div class="service-list-col2">
-              <h3>Run your Application</h3>
-              Open your React application, and start your server on localhost:3000/.
-            </div>
-          </div>
-
-          <!-- Run your appllication -->
-          <div class="service-list">
-            <div class="service-list-col1">
-              <i class="fa fa-wrench" aria-hidden="true"></i>
-            </div>
-            <div class="service-list-col2">
-              <h3>Open ReactION</h3>
-              Click the ReactION logo on the left-hand side of VS Code.
-            </div>
-          </div>
-
-          <div class="service-list">
-            <div class="service-list-col1">
-              <i class="fa fa-github" aria-hidden="true"></i>
-            </div>
-            <div class="service-list-col2">
-              <h3>Contribute on GitHub</h3>
-              <a href="https://github.com/ReactION-js/ReactION">https://github.com/ReactION-js/ReactION</a>
-            </div>
-          </div>
-        </div>
-        <figure class="col-lg-8 col-sm-6  text-right wow fadeInUp delay-02s">
-          <img id="testing-gif" src="img/testingDEMO.gif" alt="">
-        </figure>
-      </div>
-    </div>
-  </section>
-  <!--main-section-end-->
-
-  <section class="main-section alabaster" id="about-us">
-    <!--main-section alabaster-start-->
-    <div class="container">
+        <h2>About Us</h2>
       <div class="row">
         <figure class="col-lg-5 col-sm-4 wow fadeInLeft">
-          <img src="img/logo2.png" alt="ReactION logo">
+          <div id="reaction-img">
+            <img src="img/logo2.png" alt="ReactION logo">
+          </div>
         </figure>
         <div class="col-lg-7 col-sm-8 featured-work">
-          <h2>About Us</h2>
           <P class="padding-b"></P>
 
           <div class="featured-box">
             <div class="featured-box-col2 wow fadeInRight delay-02s">
-              <p>ReactION was born out of an interest in streamlining the React developer workflows, from their inception to release. </p>
+              ReactION was born out of an interest in streamlining the React developer workflows, from their inception to release.
             </div>
           </div>
 
           <div class="featured-box">
             <div class="featured-box-col2 wow fadeInRight delay-02s">
-              <p>We were exceptionally keen to target the demographic of beginner- to intermediate-level developers who are trying to get a better understanding of React’s inner workings (e.g., components, their state data, and mutual inter-relations in the component tree).</p>
+              We were exceptionally keen to target the demographic of beginner- to intermediate-level developers who are trying to get a better understanding of React’s inner workings (e.g., components, their state data, and mutual inter-relations in the component tree).
             </div>
           </div>
 
           <div class="featured-box">
             <div class="featured-box-col2 wow fadeInRight delay-04s">
-              <p> In addition, all of us are no strangers to the laborious process of spinning up an external browser to view the fruits of incremental code changes.</p>
+              In addition, all of us are no strangers to the laborious process of spinning up an external browser to view the fruits of incremental code changes.
             </div>
           </div>
           <div class="featured-box">
             <div class="featured-box-col2 wow fadeInRight delay-06s">
-              <p> With these two concerns in mind, and acknowledging the pervasive use of VSCode among developers, we set out to create an IDE that would allow users to see - in real-time - the visualized component state of their React projects AND the rendered browser output - all within the VSCode development environment.
-                </p>
+              With these two concerns in mind, and acknowledging the pervasive use of VS Code among developers, we set out to create an IDE that would allow users to see - in real-time - the visualized component state of their React projects AND the rendered browser output - all within the VS Code development environment.
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!--main-section alabaster-end-->
+  <!--ABOUT US-end-->
 
 
+  <!--team-start-->
   <section class="main-section team" id="team">
-    <!--main-section team-start-->
     <div class="container">
       <h2>MEET OUR DEVELOPERS</h2>
       <div class="team-leader-block clearfix">
 
         <!-- ANDY -->
         <div class="team-leader-box">
-          <div class="team-leader wow fadeInDown delay-03s">
+          <div class="team-leader wow fadeInDown delay-02s">
             <img src="./img/andy.jpg" alt="Andy Tran">
           </div>
-          <h3 class="wow fadeInDown delay-03s">
+          <h3 class="wow fadeInDown delay-02s">
             Andy Tran
           </h3>
-          <p class="wow fadeInDown delay-03s">
-            <a href="https://github.com/andyxtran" class="fa fa-github"></a>
-            <a href="https://www.linkedin.com/in/andy-x-tran" class="fa fa-linkedin"></a>
+          <p class="wow fadeInDown delay-02s">
+            <a href="https://github.com/andyxtran" class="fa fa-github" target="_blank"></a>
+            <a href="https://www.linkedin.com/in/andy-t-tran" class="fa fa-linkedin" target="_blank"></a>
           </p>
         </div>
 
         <!-- CARSON -->
         <div class="team-leader-box">
-          <div class="team-leader  wow fadeInDown delay-06s">
+          <div class="team-leader wow fadeInDown delay-04s">
             <img src="./img/carson.jpg" alt="Carson Chen">
           </div>
-          <h3 class="wow fadeInDown delay-06s">
+          <h3 class="wow fadeInDown delay-04s">
             Carson Chen
           </h3>
-            <p class="wow fadeInDown delay-06s">
-              <a href="https://github.com/carsoncychen" class="fa fa-github"></a>
-              <a href="https://www.linkedin.com/in/carsoncychen" class="fa fa-linkedin"></a>
+            <p class="wow fadeInDown delay-04s">
+              <a href="https://github.com/carsoncychen" class="fa fa-github" target="_blank"></a>
+              <a href="https://www.linkedin.com/in/carsoncychen" class="fa fa-linkedin" target="_blank"></a>
             </p>
         </div>
 
         <!-- DANIEL -->
         <div class="team-leader-box">
-          <div class="team-leader wow fadeInDown delay-09s">
+          <div class="team-leader wow fadeInDown delay-06s">
             <img src="./img/daniel.jpg" alt="Daniel Wu">
           </div>
-          <h3 class="wow fadeInDown delay-09s">
+          <h3 class="wow fadeInDown delay-06s">
             Daniel Wu
           </h3>
-          <p class="wow fadeInDown delay-09s">
-            <a href="https://github.com/wdanni" class="fa fa-github"></a>
-            <a href="https://www.linkedin.com/in/dnwu" class="fa fa-linkedin"></a>
+          <p class="wow fadeInDown delay-06s">
+            <a href="https://github.com/wdanni" class="fa fa-github" target="_blank"></a>
+            <a href="https://www.linkedin.com/in/dnwu" class="fa fa-linkedin" target="_blank"></a>
           </p>
         </div>
 
         <!-- JINSUNG -->
         <div class="team-leader-box">
-          <div class="team-leader  wow fadeInDown delay-12s">
+          <div class="team-leader wow fadeInDown delay-08s">
             <img src="./img/jinsung.jpg" alt="Jinsung Park">
           </div>
-          <h3 class="wow fadeInDown delay-12s">
+          <h3 class="wow fadeInDown delay-08s">
             Jinsung Park
           </h3>
-          <p class="wow fadeInDown delay-12s">
-            <a href="https://github.com/jsliapark" class="fa fa-github"></a>
-            <a href="https://www.linkedin.com/in/jsliapark" class="fa fa-linkedin"></a>
+          <p class="wow fadeInDown delay-08s">
+            <a href="https://github.com/jsliapark" class="fa fa-github" target="_blank"></a>
+            <a href="https://www.linkedin.com/in/jsliapark" class="fa fa-linkedin" target="_blank"></a>
           </p>
         </div>
       </div>
     </div>
   </section>
-  <!--main-section team-end-->
+  <!--team-end-->
 
   <script type="text/javascript" src="build/bundle.js"></script>
 

@@ -41,7 +41,9 @@
 
 img{ max-width:100%;}
 
-.samples{ max-width:40%;}
+#samples{box-shadow: 4px 8px 8px 5px #ececec;}
+
+#reaction-img{max-width: 80%; margin-left:10%; text-align: center;}
 
 a, a:hover, a:active{ outline:0px !important}
 @import url(https://fonts.googleapis.com/css?family=Khula:700);
@@ -63,20 +65,20 @@ body {
 	font-size:14px;
 	font-weight:normal;
 	color:#888888;
-	margin:0;
+  margin:0;
 }
 h2{
 	font-size:34px;
 	color:#222222;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Varela Round', sans-serif;
 	font-weight:700;
 	letter-spacing: -1px;
-	margin:0 0 50px 0;
+	margin:0 0 45px 0;
 	text-align:center;
 	text-transform:uppercase;
 }
 h3{
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Varela Round', sans-serif;
 	color:#222222;
 	font-size:16px;
 	margin:0 0 5px 0;
@@ -101,15 +103,18 @@ p{
 
 .header{
 	text-align:center;
-  padding:100px 0;
+  height:100vh;
+  width:100%;
+  background:lightblue;
+  position: relative;
 }
 
 .logo{
 	width:130px;
-	margin:0 auto 35px;
+  margin:0 auto 35px;
 }
 .header h1{
-	font-family: 'Montserrat',sans-serif;
+	font-family: 'Varela Round', sans-serif;
 	font-size:90px;
 	font-weight:400;
 	letter-spacing: -1px;
@@ -119,14 +124,13 @@ p{
 
 .we-create{
 	padding:0;
-	margin:35px 0 55px;
 }
 .wp-pic{
 	margin-bottom:20px;
 }
 .we-create li{
 	display:inline-block;
-	font-family: 'Montserrat',sans-serif;
+	font-family: 'Varela Round', arial, sans-serif;
 	font-size:14px;
 	color: #bcbcbc;
 	text-transform: uppercase;
@@ -148,58 +152,60 @@ color: #fff;
 
 .link{
 	padding:15px 35px;
-	background: #2bc0dc;
-	color:#fff !important;
+	background: transparent;
+	color:#fff;
 	font-size:16px;
 	font-weight:400;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Varela Round', sans-serif;
 	display:inline-block;
-	border-radius:3px;
+  border-radius:19px;
+  border: 3px solid white;
 	text-transform:uppercase;
 	line-height:25px;
-  margin-bottom:20px;
-  margin-right: 8px;
+  margin:15px;
 	transition:all 0.3s ease-in-out;
 	-moz-transition:all 0.3s ease-in-out;
 	-webkit-transition:all 0.3s ease-in-out;
 }
 .link:hover {
 	text-decoration:none;
-	background: #63B9E6;
+  background: rgba(255, 255, 255, 0.8);
+  color: gray;
 }
 
 .link:active, .link:focus {
-	background: #7745B9;
+	background: gray;
 	text-decoration:none;
-	color:#fff !important;
+	color:#fff;
 }
 
 .github-link{
 	padding:15px 50px;
-	background: #2bc0dc;
-	color:#fff !important;
+	background: transparent;
+	color:#fff;
 	font-size:16px;
 	font-weight:400;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Varela Round', sans-serif;
 	display:inline-block;
-	border-radius:3px;
+  border-radius:19px;
+  border: 3px solid white;
 	text-transform:uppercase;
 	line-height:25px;
-  margin-bottom:20px;
-  margin-left: 8px;
+  margin:15px;
 	transition:all 0.3s ease-in-out;
 	-moz-transition:all 0.3s ease-in-out;
 	-webkit-transition:all 0.3s ease-in-out;
 }
 .github-link:hover {
 	text-decoration:none;
-	background: #63B9E6;
+  background: rgba(255, 255, 255, 0.8);
+  color: #8C6FB4;
 }
 
-.githublink:active, .link:focus {
-	background: #7745B9;
+.github-link:active, .github-link:focus {
+	background: #8C6FB4;
 	text-decoration:none;
-	color:#fff !important;
+	color:#fff;
 }
 
 /* Navigation
@@ -207,13 +213,14 @@ color: #fff;
 .main-nav-outer{
 	padding:0px;
 	border-bottom:1px solid #dddddd;
-	box-shadow:0 4px 5px -3px #ececec;
+	box-shadow:0 5px 5px -3px #ececec;
 	position:relative;
 	background-color: #fafafa;
 }
 .main-nav{
 	text-align:center;
-	margin:10px 0 0px;
+  margin:10px 0 0px;
+  margin-left: 65px;
 	padding:0;
 	list-style:none;
 }
@@ -225,7 +232,7 @@ color: #fff;
 	display:inline-block;
 	color:#222222;
 	text-transform:uppercase;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Varela Round', sans-serif;
 	text-decoration: none;
 	line-height:20px;
 	margin:12px 33px;
@@ -236,7 +243,7 @@ color: #fff;
 
 .main-nav li a:hover{ 
 	text-decoration:none;
-	color: #7cc576;
+	color: #66ccff;
 }
 
 .small-logo{ 
@@ -244,7 +251,7 @@ color: #fff;
 }
 
 .main-section{
-	padding:90px 0 100px;
+	padding:70px 0 150px;
 }
 
 
@@ -310,10 +317,10 @@ color: #fff;
 	margin-bottom:5px;
 }
 .featured-box p{
-	line-height:22px;
+	line-height:30px;
 }
 .featured-work p.padding-b{
-	padding-bottom:35px;
+	padding-bottom:2em;
 }
 .featured-box-col1{
 	width:60px;
@@ -327,7 +334,7 @@ color: #fff;
 	color:#777777;
 	font-style:normal;
 }
-.featured-box-col2{ overflow:hidden;}
+.featured-box-col2{ overflow:hidden; font-size: 16px; line-height:1.7;}
 .featured-box.magic{
 	background:url(../img/magic.png) left top no-repeat;
 }
@@ -343,7 +350,7 @@ color: #fff;
 	color:#7cc576;
 	font-size:16px;
 	text-transform:uppercase;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Varela Round', sans-serif;
 	font-weight:400;
 	line-height:24px;
 	transition:all 0.3s ease-in-out;
@@ -379,7 +386,6 @@ color: #fff;
 	margin-bottom:24px;
 	display:block;
 }
-.team-leader-box:nth-of-type(4n+0){ margin:0;}
 .team-leader{
 	width:auto;
 	height:auto;
@@ -441,9 +447,9 @@ color: #fff;
   color:gray;	
   padding-right: 10px;
   padding-left: 10px;
-	transition:all 0.3s ease-in-out;
-	-moz-transition:all 0.3s ease-in-out;
-	-webkit-transition:all 0.3s ease-in-out;
+	transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out;
+	-webkit-transition:all 0.2s ease-in-out;
 }
 
 
@@ -507,7 +513,7 @@ color: #fff;
 	color:#ffffff;
 	font-size:14px;
 	text-transform:uppercase;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Varela Round', sans-serif;
 	font-weight:400;
 	border:0px;
 	transition:all 0.3s ease-in-out;
@@ -876,11 +882,11 @@ color: #fff;
 
 .container-header {
 	text-align: left;
-	padding-left: 5%;
+  padding-left: 5%;
 }
 
 #logo-header {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Varela Round', arial;
 }
 
 #header-description {
@@ -897,10 +903,6 @@ color: #fff;
 	padding: 0;
 }
 
-#demo {
-	background: #fff;
-}
-
 #team {
 	background-color: #fafafa;
 }
@@ -909,4 +911,21 @@ color: #fff;
 	width: 60px;
 	display:block;
     margin:auto;
+}
+
+#particles-js {
+  height:100%;
+  width:100%;
+  background: lightblue;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 }
